@@ -3,9 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
+const { nodeEnv } = require('../../config');
 const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
-const config = require(path.join(__dirname, '../../config/database.js'))[env];
+const config = require(path.join(__dirname, '../../config/database.js'))[nodeEnv];
 const db = {};
 
 let sequelize;
